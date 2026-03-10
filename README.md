@@ -20,26 +20,31 @@ ProgettoLSO/
 │   ├── client.c                # Main: connessione, login, menu
 │   ├── ui.c                    # Stampa griglia e menu
 │   └── game_loop.c             # Loop di gioco e attesa avversario
-├── compile.sh                  # Script di compilazione
+├── Makefile                    # Build system Make
 ├── CMakeLists.txt              # Build system CMake
+├── compile.sh                  # Script di compilazione alternativo
 ├── README.md
 └── documentazione.pdf
 ```
 
 ## Compilazione
 
-Requisiti: `gcc` e libreria `pthread` (Linux).
+Requisiti: `gcc`, `make` e libreria `pthread` (Linux).
 
 ```bash
-chmod +x compile.sh
-bash compile.sh
+make
 ```
 
-Oppure manualmente:
+Per ripulire i binari:
 
 ```bash
-gcc -Wall -Wextra -pthread -o server/forza4_server server/server.c server/game.c server/client_handler.c
-gcc -Wall -Wextra -o client/forza4_client client/client.c client/ui.c client/game_loop.c
+make clean
+```
+
+In alternativa, con lo script Bash:
+
+```bash
+bash compile.sh
 ```
 
 ## Esecuzione
