@@ -1,5 +1,7 @@
 # Forza 4 - Client/Server
 
+**Giuseppe Pollio** - N86004953
+
 Progetto per l'esame di **Laboratorio di Sistemi Operativi** (Vecchio Ordinamento).
 
 Sistema Client-Server per il gioco Forza 4 (Connect Four), implementato in C con socket TCP e thread POSIX.
